@@ -21,6 +21,7 @@ class _MainPageState extends State<MainPage> {
     return Scaffold(
       appBar: AppBar(title: const Text('Title')),
       body: PageTransitionSwitcher(
+        reverse: _currentIndex == 0,
         duration: const Duration(seconds: 1),
         transitionBuilder: (child, primaryAnimation, secondaryAnimation) {
           return SharedAxisTransition(
